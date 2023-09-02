@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif, arial;
+    background-color: #111111;
+    overflow-x: hidden;
+    font-size: 18px;
+}
+
+.navigation {
+    height: 55px; 
+    background: white;
+    box-shadow: 0px 1.5px 5px #58585c;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: space-around;
+    height: 55px; /* À changer peut être aussi, il doit être le même que la hauteur de .navigation*/
+    align-items: center;
+}
+
+.links, .social-icons {
+    list-style-type: none;
+}
+
+#icon-1 {
+    color: black;
+    transition: .3s
+}
+
+#icon-1:hover {
+    color: #00afa8;
+}
+
+#icon-2 {
+    color: black;
+    transition: .3s
+}
+
+#icon-2:hover {
+    color: #00afa8;
+}
+
+#icon-3 {
+    color: black;
+    transition: .3s
+}
+
+#icon-3:hover {
+    color: #00afa8;
+}
+
+.links {
+    display: flex;
+    width: 25rem;
+    justify-content: space-around;
+}
+
+.hyperlink-1 {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    position: relative;
+    transition: font-weight 0.8s ease;
+}
+
+.hyperlink-1:hover {
+    color: #00afa8;
+    font-weight: 600;
+}
+
+.hyperlink-1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; 
+    background-color: #00afa8;
+    transition: width 0.3s ease;
+}
+
+.hyperlink-1:hover::after {
+    width: 100%;
+}
+
+.addition-container {
+    margin-top: -10px;
+    display: none;
+}
+
+.addition {
+    display: none;
+}
+
+.social-icons {
+    display: flex;
+    width: 8%;
+    justify-content: space-around;
+}
+
+.nav-header {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: .5rem;
+    right: 2rem;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+  .rotate {
+    color: white;
+    transform: rotate(90deg);
+  }
+
+  @media screen and (max-width: 480px) {
+    .nav-toggle {
+        display: inline-block;
+        font-size: 1.5rem;
+        color: black;
+        background: transparent;
+        border-color: transparent;
+        transition: all 0.3s linear;
+        cursor: pointer;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        align-items: space-around;
+        position: absolute;
+        left: 0;
+        top: 55px;
+        background-color: #00afa8;
+        height: 0;
+        overflow: hidden;
+        transition: height 1s;
+    }
+
+    .appear {
+        height: 120px;
+    }
+
+    .hyperlink-1 {
+        color: white;
+        margin-left: 10px;
+    }
+
+    .hyperlink-1:hover {
+        color: white;
+        font-weight: normal;
+    }    
+
+    .raccon {
+        display: none;
+    }
+
+    .addition-container {
+        display: inline-block;
+    }
+
+    .addition {
+        display: inline-block;
+    }
+
+    .social-icons {
+        display: none;
+    }
+  }
+
+/* End of Navbar */
+
+/*body*/
+
+.whole-page-faq {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 145%;
+}
+
+.category-question {
+    margin-top: 2.2rem;
+    text-decoration: underline;
+    color: #00afa8
+}
+
+.question-header {
+    width: 70%;
+    font-size: 30px;
+    color: white;
+}
+
+.question-answer {
+    margin-top: 0.8rem;
+    color: rgba(255, 255, 255, 0.685);
+}
+
+.question-container {
+    width: 70%;
+    margin-bottom: 4rem;
+    margin-top: 1.8rem;
+}
+
+/*end of body*/
+
+/*footer*/
+.footer {
+    height: 20rem;
+    background: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.underline-h6 {
+    font-size: 1rem;
+    position: relative;
+}
+
+.underline-h6::before {
+    content: "";
+    width: 80%;
+    height: 2.5px;
+    background-color: #cfcfcf;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.ul-container {
+    width: 70%;
+    height: 80%;
+    display: grid;
+    margin-top: 4rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.unordered-list {
+    list-style-type: none;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-row {
+    padding-left: 0;
+    margin-top: 0.25rem;
+}
+
+.social-media-ycon {
+    display: flex;
+    flex-direction: row; 
+    width: 25%;
+    margin-top: 0.30rem;
+    justify-content: space-between;
+}
+
+.a-link {
+    text-decoration: none;
+    color: rgb(36, 36, 36);
+}
+
+.email {
+    text-decoration: underline
+}
+
+.legal {
+    font-size: 12px;
+    color: rgb(117, 117, 117);
+    position: absolute;
+    bottom: 20px;
+    left: 15%
+}
+/*end of footer*/
+@media screen and (max-width: 1076px) {
+    .links {
+        width: 25rem;
+    }
+}
+
+@media screen and (max-width: 945px) {
+    .question-container {
+        width: 80%;
+    }
+
+    .ul-container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 755px) {
+    
+
+    .hyperlink-1 {
+        font-size: 16px;
+    }
+
+    .social-icons {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    
+    .footer {
+        height: 55rem;
+    }
+    
+    .underline-h6 {
+        margin-top: 1rem;
+    }
+
+    .ul-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .links {
+        width: 60%;
+    }
+
+    .legal {
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 481px) {
+    .links {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .question-container {
+        width: 90%;
+    }
+    .ul-container {
+        width: 90%;
+    }
+
+    .question-header {
+        width: 90%;
+    }
+    
+}
